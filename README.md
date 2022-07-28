@@ -11,3 +11,48 @@ To perform this function, we must provide the tools with the main terms we want 
 This ontology can be studied in OWL format or visually in the Neo4j database.
 
 ## Requirements
+
+---
+---
+# Data .env
+
+## Database Life Sciences Parameters:
+    
+        -> AgroPortal LIRMM
+            REST_URL = http://data.agroportal.lirmm.fr
+            sparql_service = http://sparql.agroportal.lirmm.fr/sparql/
+
+        -> Bioportal
+            REST_URL = http://data.bioontology.org
+            sparql_service = http://sparql.bioontology.org/sparql/
+
+        -> BioPortal LIRMM (France)
+            REST_URL = http://data.bioportal.lirmm.fr
+            sparql_service = http://sparql.bioportal.lirmm.fr/sparql/
+
+        -> EcoPortal
+            REST_URL = 
+            sparql_service = No data
+
+        -> MedPortal
+            REST_URL = http://data.medportal.bmicc.cn
+            sparql_service = http://sparql.bioontology.org/sparql/
+
+## REST API Parameters
+
+        wc -> Weight assigned to the ontology coverage criterion.
+        wa -> Weight assigned to the ontology acceptance criterion.
+        wd -> Weight assigned to the ontology detail criterion.
+        ws -> Weight assigned to the ontology specialization criterion.
+        ---
+        ontology_list -> If you want knitLifeSciencie to USE a specific ontology, you must put the acronym here
+        ontology_denied -> If you want knitLifeSciencie NOT TO USE any ontology, you must put the acronym here
+
+        Example to use: 
+            wc = 0.8
+            wa = 0.8
+            wd = 0.8
+            ws = 0.8
+            ontlology_list = NCIT,MESH,CODO
+            ontology_denied = NCIT,MESH,CODO
+            
