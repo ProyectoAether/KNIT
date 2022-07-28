@@ -15,7 +15,7 @@ def star_knit(
     wa: str,
     wd: str,
     ws: str,
-    ONTOLOGY: list,
+    ontology_list: list,
     ontology_denied: list,
 ):
 
@@ -38,7 +38,7 @@ def star_knit(
             wa,
             wd,
             ws,
-            ONTOLOGY,
+            ontology_list,
             ontology_denied,
         )
         for element in list_text[0:100]:
@@ -57,7 +57,7 @@ def star_knit(
             wa,
             wd,
             ws,
-            ONTOLOGY,
+            ontology_list,
             ontology_denied,
         )
 
