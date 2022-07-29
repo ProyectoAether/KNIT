@@ -1,7 +1,9 @@
 import json
 import requests
+import time
 from SPARQLWrapper import SPARQLWrapper, JSON, GET
 from tqdm import tqdm
+from knitbio.py_query_cypher import query_neo4j_list, query_neo4j_str
 
 denied = 0
 List_node_news = []
@@ -51,24 +53,34 @@ def knit(
         ),
     )
 
-    def reverse_url_encoding(text: str):  
-
-        dicc_replace = {":": "%3A", "/": "%2F", "#": "%23"}
-        for x, y in dicc_replace.items():
-            text = text.replace(x, y)
-        return text
-
     def knit_data(uri: str, acronym: str):
-
-        """ 
-
-        :param uri: 
-        :param acronym:
-        """
 
         url_uri = reverse_url_encoding(uri)
         print(REST_URL + "/ontologies/" + acronym + "/classes/" + url_uri + "/?apikey=" + API_KEY)
-        
+        while True:
+            try:
+
+                url_self = requests.get(
+                    REST_URL + "/ontologies/" + acronym + "/classes/" + url_uri,
+                    headers=headers,
+                )
+                break
+            except:
+                time.sleep(sleep)
+                sleep += 60
+        status = str(url_self.status_code)
+        if status == "200":
+            url_self_1 = json.loads(url_self.content)
+            data_elemet(url_self_1, acronym)
+            parents(acronym, uri)
+
+        if status != "200":
+            list_acronym_denied.append(acronym)
+            denied.append(acronym)
+
+    def parents(onto: str, uri: str):
+        uri_1 = reverse_url_encoding(uri)
+     
 
 
     def recommend_bioportal(list_label: list, ontology_denied: list, wc: str, wa: str, wd: str, ws: str,
@@ -151,6 +163,11 @@ def knit(
         except Exception as e:
             print(e)
 
-    
+    def reverse_url_encoding(text: str):  
+
+        dicc_replace = {":": "%3A", "/": "%2F", "#": "%23"}
+        for x, y in dicc_replace.items():
+            text = text.replace(x, y)
+        return text
 
     recommend_bioportal(list_text, ontology_denied, wc, wa, wd, ws, ONTOLOGY)

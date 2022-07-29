@@ -3,9 +3,6 @@ import pandas as pd
 from decouple import config
 from knitbio.first_layer import knit
 
-print(config("API_KEY"))
-
-
 def star_knit(
     sparql_service,
     REST_URL: str,
