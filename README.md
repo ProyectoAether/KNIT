@@ -31,12 +31,15 @@ This ontology can be studied in OWL format or visually in the Neo4j database.
             sparql_service = http://sparql.bioportal.lirmm.fr/sparql/
 
         -> EcoPortal
-            REST_URL = 
+            REST_URL = http://ecoportal.lifewatch.eu:8080/
             sparql_service = No data
 
         -> MedPortal
             REST_URL = http://data.medportal.bmicc.cn
             sparql_service = http://sparql.bioontology.org/sparql/
+
+
+The use of BioPortal is recommended.
 
 ## REST API Parameters
 
