@@ -68,7 +68,7 @@ def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service
 
         """
         This function creates classes, as long as the "class" is not 'Thing'.
-        Depending on whether b.type and b.label are different from "None", 
+        Depending on whether b.type and b.label are different from "None",
         they must be described differently.
         """
 
@@ -86,8 +86,8 @@ def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service
         if elemnt_class.get("uri") != "http://www.w3.org/2002/07/owl#Thing":
             for elemnt in consult_query_class:
                 """
-                As a general rule, in the "BioPortal", and its ecosystem, 
-                the properties that have the label, and the type, are properties of the ontologies. 
+                As a general rule, in the "BioPortal", and its ecosystem,
+                the properties that have the label, and the type, are properties of the ontologies.
                 In contrast, properties without these features are generic and widely known.
                 """
 
@@ -253,7 +253,7 @@ def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service
         Similarly, we generate the annotation of properties
         """
 
-        consult_query_prop = query(
+        consult_query_prop = query_neo4j_list(
             IP_SERVER_NEO4J,
             USER_NEO4J,
             PASSWORD_NEO4J,
@@ -266,13 +266,80 @@ def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service
 
         for elemnt in consult_query_prop:
             """
-            We note the described properties. 
-            Given that the desired result of this version is the construction of an exemplary and not definitive ontology, 
-            to avoid complex problems related to null values, we discard data linked to Axioms and restrictions 
+            We note the described properties.
+            Given that the desired result of this version is the construction of an exemplary and not definitive ontology,
+            to avoid complex problems related to null values, we discard data linked to Axioms and restrictions
             (as well as erroneous BioPortal nodes, we suspect that these nodes are previously deleted values)
             """
-            if elemnt['c.uri'] != 'http://www.w3.org/2002/07/owl#Axiom' and elemnt['c.uri'] != 'http://www.w3.org/2002/07/owl#Restriction':
-                g.add((rdflib.URIRef(elemnt['a.uri']),rdflib.URIRef(elemnt['b.uri']),rdflib.URIRef(elemnt['c.uri'])))
-                g.add((rdflib.URIRef(elemnt['a.uri']), RDFS.label, rdflib.Literal(elemnt['a.label'], datatype=XSD.string)))
+            if (
+                elemnt["c.uri"] != "http://www.w3.org/2002/07/owl#Axiom"
+                and elemnt["c.uri"] != "http://www.w3.org/2002/07/owl#Restriction"
+            ):
+                g.add(
+                    (
+                        rdflib.URIRef(elemnt["a.uri"]),
+                        rdflib.URIRef(elemnt["b.uri"]),
+                        rdflib.URIRef(elemnt["c.uri"]),
+                    )
+                )
+                g.add(
+                    (
+                        rdflib.URIRef(elemnt["a.uri"]),
+                        RDFS.label,
+                        rdflib.Literal(elemnt["a.label"], datatype=XSD.string),
+                    )
+                )
+
+    for node_neo in all_class_uri:
+        """
+        As the last step, the annotations described at the beginning of the script are inserted.
+        """
+
+        if node_neo.get("uri") != None:
+            label_literal = rdflib.Literal(node_neo.get("label"), datatype=XSD.string)
+            g.add((rdflib.URIRef(node_neo.get("uri")), RDFS.label, label_literal))
+
+            dicc_comment = {}
+            if node_neo.get("synonym") != None:
+                if len((node_neo.get("synonym"))) > 2:
+                    term_synonym = rdflib.Literal(
+                        node_neo.get("synonym")[1:-1], datatype=XSD.string
+                    )
+                    g.add(
+                        (
+                            rdflib.URIRef(node_neo.get("uri")),
+                            rdflib.URIRef(URI_synonym),
+                            term_synonym,
+                        )
+                    )
+                    # dicc_comment.update({'Synonym': node_neo.get('synonym')[1:-1]})
+            if node_neo.get("definition") != None:
+                if len((node_neo.get("definition"))) > 2:
+                    term_definition = rdflib.Literal(
+                        node_neo.get("definition")[1:-1], datatype=XSD.string
+                    )
+                    g.add(
+                        (
+                            rdflib.URIRef(node_neo.get("uri")),
+                            rdflib.URIRef(URI_definition),
+                            term_definition,
+                        )
+                    )
+            if node_neo.get("ontology") != None:
+                if len((node_neo.get("ontology"))) >= 1:
+                    term_ontology = rdflib.Literal(
+                        node_neo.get("ontology"), datatype=XSD.string
+                    )
+                    g.add(
+                        (
+                            rdflib.URIRef(node_neo.get("uri")),
+                            rdflib.URIRef(URI_ontology),
+                            term_ontology,
+                        )
+                    )
     
-    for node_neo['c.uri']
+    print((g.serialize(format="nt")))
+
+    owl_file = open("output/test_o.owl", "w")
+    owl_file.write(g.serialize(format="pretty-xml"))
+    owl_file.close()
