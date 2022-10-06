@@ -2,6 +2,7 @@ import __init__
 import pandas as pd
 from decouple import config
 from knitbio.first_layer import knit
+from knitbio.second_layer import neo2RDF
 
 def star_knit(
     sparql_service,
@@ -71,6 +72,13 @@ star_knit(
     (config("ontology_list")),
     (config("ontology_denied")),
 )
+neo2RDF(
+    (config("IP_SERVER_NEO4J")),
+    (config("USER_NEO4J")),
+    (config("PASSWORD_NEO4J")),
+    (config("API_KEY")),
+    (config("sparql_service")),
+    )
 
 print("end_!")
 
