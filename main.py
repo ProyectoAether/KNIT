@@ -4,6 +4,7 @@ from decouple import config
 from knitbio.first_layer import knit
 from knitbio.second_layer import neo2RDF
 
+
 def star_knit(
     sparql_service,
     REST_URL: str,
@@ -78,8 +79,6 @@ neo2RDF(
     (config("PASSWORD_NEO4J")),
     (config("API_KEY")),
     (config("sparql_service")),
-    )
+)
 
 print("end_!")
-
-
