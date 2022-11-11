@@ -312,7 +312,7 @@ def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service
                             term_synonym,
                         )
                     )
-                    # dicc_comment.update({'Synonym': node_neo.get('synonym')[1:-1]})
+
             if node_neo.get("definition") != None:
                 if len((node_neo.get("definition"))) > 2:
                     term_definition = rdflib.Literal(
@@ -337,8 +337,6 @@ def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service
                             term_ontology,
                         )
                     )
-    
-    print((g.serialize(format="nt")))
 
     owl_file = open("output/test_o.owl", "w")
     owl_file.write(g.serialize(format="pretty-xml"))
