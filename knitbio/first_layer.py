@@ -87,15 +87,6 @@ def knit(
     def knit_data(uri: str, acronym: str):
 
         url_uri = reverse_url_encoding(uri)
-        #print(
-        #    REST_URL
-        #    + "/ontologies/"
-        #    + acronym
-        #    + "/classes/"
-        #    + url_uri
-        #    + "/?apikey="
-        #    + API_KEY
-        #)
         while True:
             try:
 
@@ -176,7 +167,7 @@ def knit(
             for id in list_mapp:
                 if id in all_uri_neo4j and uri != id:
                     """
-                    algunos elemento poesen entres sus mappings asi mismos, para evitar que se generen estos enlaces recursivos uri!=id
+                    Some elements have themselves among their mappings, to avoid generating these recursive links uri!=id
                     """
                     query_neo4j_str(
                         IP_SERVER_NEO4J,
@@ -211,7 +202,7 @@ def knit(
                     uri_parent = data["@id"]
                     if not uri in all_mapping_neo4j:
                         """
-                        si uri esta posee un mapping es como si el elemnto en cuestion ya exitiese, por ello tomamos la rama a la que se adiere como buen y dejamos de tejer"
+                        If URI has a mapping, it is as if the element in question already exists, so we take the branch to which it adheres as good, and we stop weaving
                         """
                         data_elemet(data, onto)
                         mapping_parent = f"""
@@ -352,7 +343,7 @@ def knit(
                 new_list = head_str.split(",")
                 for a in new_index:
                     """
-                    para encontrar los nodos que no han sido dibujados 
+                    To find the nodes that have not been drawn 
                     """
                     if a in new_list:
                         new_list.remove(a)
@@ -706,7 +697,6 @@ def knit(
                             Optional{{?property rdfs:label ?label_property}}.
                             Optional{{?elementB rdfs:label ?label_elementB}}.
                             }}"""
-            # TODO: for variables whith get, you do whitout optional
         sparql.setQuery(query_sparql)
         sparql.setReturnFormat(JSON)
         if sparql_service != 'http://sparql.bioontology.org/sparql/':
@@ -723,7 +713,7 @@ def knit(
                             if response['elementB']['value'] not in all_class and response['elementB'][
                                     'value'] not in list_uri:
                                 list_uri.append(response['elementB'][
-                                                        'value'])  ######## TODO:  peta with st list index out of range !!!!
+                                                        'value'])  
                                 try:
                                     """need to know the acronym of the ontology to which it belongs
                                         
@@ -756,7 +746,12 @@ def knit(
                                         knit_data(response['elementB']['value'], (
                                         sparql_acron.query().convert()["results"]["bindings"][-1]["acr"]["value"]).upper())
                                         """
-                                                    at this point it is important to give a type to the new elements that have been created, which is why it is proposed that that as it cannot be a child class of anything but other classes (subclasses) the new elements must be classes. Therefore, we make a new call, and to retrieve a list of all our elements at the current time and from this list we remove the previous elements and the list_uri. These results are traversed with a for and are given the type of classes at the same time they are integrated into list_uri for similar results.                                           
+                                        At this point it is important to give a type to the new elements that have been created, 
+                                        which is why it is proposed that that as it cannot be a child class of anything but other 
+                                        classes (subclasses)the new elements must be classes. Therefore, we make a new call, 
+                                        and to retrieve a list of all our elements at the current time and from this list we remove
+                                        the previous elements and the list_uri. These results are traversed with a for and are given 
+                                        the type of classes at the same time they are integrated into list_uri for similar results.                                           
                                         """
                                         current_list_uri = [(uri["n.uri"]) for uri in query_neo4j_list(
                                                 IP_SERVER_NEO4J,
@@ -779,28 +774,6 @@ def knit(
                                 except Exception as e:
                                     print(e)
 
-                                        # TODO:"If the process of creating fails, it has to be constructed in an artificial way (not included in the api"
-                                    #if (len(sparql_acron.query().convert()["results"]["bindings"])) > 0:
-                                    #    acrom_elem = (
-                                    #    sparql_acron.query().convert()["results"]["bindings"][-1]["acr"]["value"])
-                                    #else:
-                                    #    acrom_elem = "unknown"
-                                    #print(12)
-                                    #print(str(response['elementB']['value']))
-                                    #query_neo4j_str(
-                                    #        IP_SERVER_NEO4J,
-                                    #        USER_NEO4J,
-                                    #        PASSWORD_NEO4J,
-                                    #        ("MERGE (a:Class {name:'" + str(
-                                    #            response['elementB']['value']) + "', label:'" + str(
-                                    #            response['elementB']['value']) + "', uri:'" + str(response['elementB'][
-                                    #                                                                'value']) + "', synonym:'', definition:'', ontology:'" + acrom_elem + "'})"),
-                                    #    )
-                            #query_type_elemnt = f"""MATCH (a {{uri:"{response['elementB']['value']}"}}),(b {{uri:"http://www.w3.org/2002/07/owl#Class"}}) MERGE (a)-[:PROPERTY {{uri:'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'}}]->(b)"""
-                            #query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, (query_type_elemnt))
-
-                            #TODO: aqui quizas para que funciones el parche deberia poner un if e =! 1 marcando e=0 en el except y e = 1 en el try
-                            
                             if len(response.get('type_prop')) >= 1 and len(response.get('label_property')) >= 1:
                                 query_element = f"""MATCH (a {{uri:"{response['elementB']['value']}"}}),(b {{uri:"{uri_sparql}"}}) MERGE (a)-[:PROPERTY {{uri:'{response['property']['value']}', label: '{response['label_property']['value']}', type: '{response['type_prop']['value']}'}}]->(b)"""
                             else:
@@ -809,21 +782,13 @@ def knit(
                             query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, (query_element))
 
                         if response['type_elementB']['value'] != 'http://www.w3.org/2002/07/owl#Class' and len(response.get('label_elementB')) >= 1:
-                                #TODO: the above if it is possible to mention the existence of label,
-                                #TODO: len(response.get('label_elementB')) >= 1
+                             
                             if response['elementB']['value'] not in all_property and response['elementB'][
                                     'value'] not in list_uri:
                                 list_uri.append(response['elementB']['value'])
                                 query_new_propety = f"""MERGE (a:Propety {{uri:"{response['elementB']['value']}", label:"{response['label_elementB']['value']}"}})"""
                                 query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, (query_new_propety))
 
-                                    # TODO: in the next else enter the restinations and somevalue, very interesting at the level of reasoner.
-                                    #if len(response.get('label_elementB')) >= 1:
-                                    #   query_new_propety = f"""MERGE (a:Propety {{uri:"{response['elementB']['value']}", label:"{response['label_elementB']['value']}"}})"""
-                                    #   query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, (query_new_propety))
-                                    #else:
-                                    #    query_new_propety = f"""MERGE (a:Propety {{uri:"{response['elementB']['value']}", label:"{response['elementB']['value']}"}})"""
-                                    #    query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, (query_new_propety))
                             if response['type_elementB']['value'] not in all_class and response['type_elementB'][
                                     'value'] not in list_uri:
                                 list_uri.append(response['type_elementB']['value'])
