@@ -19,7 +19,7 @@ KNIT uses Neo4j as its database. Download the docker at the following link: http
 ### 2. Own a user in the target database (BioPortal, AgroPortal, EcoPortal, MedPortal)
 Create a user account in the database you want to use (BioPortal, AgroPortal, EcoPortal, MedPortal); the API_KEY will be your user token.
 
-### 3. Create a .env
+### 3. Create a `.env
 Create a `.env` file by modifying `.env.template`. Depending on the target base, use the following parameters:
 
 ### Database Life Sciences Parameters:
