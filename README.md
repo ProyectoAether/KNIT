@@ -21,8 +21,7 @@ Create a user account in the database you want to use (BioPortal, AgroPortal, Ec
 
 ### 3. Create a `.env`
 Create a `.env` file by modifying `.env.template`. Depending on the target base, use the following parameters:
-
-### Database Life Sciences Parameters:
+#### Database Life Sciences Parameters:
 ```
 -> AgroPortal LIRMM
 	REST_URL = http://data.agroportal.lirmm.fr
@@ -45,8 +44,7 @@ Create a `.env` file by modifying `.env.template`. Depending on the target base,
 	sparql_service = http://sparql.bioontology.org/sparql/
 ```
 The use of BioPortal is recommended.
-
-### REST API Parameters
+#### REST API Parameters:
 ```
 WhiteList -> If you want knitLifeSciencie to USE a specific ontology, you must put the acronym here.
 
@@ -58,12 +56,12 @@ WhiteList = NCIT,MESH,CODO
 or
 BlackList = NCIT,MESH,CODO
 ```
-### Variables of input csv
+#### Variables of input csv:
 ```
 path_csv -> Input csv address
 sep_csv -> Separation used by the csv
 ```
-### Example `.env`
+#### Example `.env`:
 ```
 #########################################################
 # variables of the databases of the bioportal ecosystem #
