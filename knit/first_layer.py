@@ -93,7 +93,6 @@ def knit(
                 break
 
             except:
-                print(1)
                 time.sleep(sleep)
                 sleep += 60
         status = str(url_self.status_code)
@@ -119,7 +118,6 @@ def knit(
                 )
                 break
             except:
-                print(5)
                 time.sleep(sleep)
                 sleep += 60
 
@@ -135,7 +133,6 @@ def knit(
                     url_parents_1 = requests.get(url_parents)
                     break
                 except:
-                    print(11)
                     time.sleep(sleep)
                     sleep += 60
 
@@ -147,7 +144,6 @@ def knit(
                     url_mapping_1 = requests.get(url_mapping)
                     break
                 except:
-                    print(14)
                     time.sleep(sleep)
                     sleep += 60
 
@@ -271,7 +267,6 @@ def knit(
 
                 break
             except:
-                print(17)
                 time.sleep(sleep)
                 sleep += 60
         recommend_json = json.loads(recommend.content)
@@ -282,11 +277,9 @@ def knit(
                 for ontology in recommend_json:
                     for data in ontology["ontologies"]:
                         acronym = data["acronym"]
-                        print(acronym, "   <-----------------------")
                     for data_2 in ontology["coverageResult"]["annotations"]:
                         label_class = data_2["text"]
                         id_class = data_2["annotatedClass"]["@id"]
-                        print(label_class)
                         if not label_class in spider and acronym not in BlackList:
                             spider.update({label_class: {id_class: acronym}})
                 for label_class, id_class_acronym in tqdm(spider.items()):
@@ -309,7 +302,6 @@ def knit(
                                 )
                                 break
                             except:
-                                print(24)
                                 time.sleep(sleep)
                                 sleep += 60
 

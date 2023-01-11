@@ -5,6 +5,8 @@ from rdflib import Graph
 from rdflib.namespace import RDFS, RDF, OWL, XSD
 from tqdm import tqdm
 from knit.py_query_cypher import query_neo4j_list
+from knit.py_btw_ind import property_between_individuals
+
 
 
 def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service):
@@ -112,8 +114,8 @@ def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service
                                 uri_2,
                             )
                             if property_btw_i != None:
-                                query_replace = f"""MATCH (a {{uri:'{uri_1}'}})-[p {{uri:'http://www.w3.org/2000/01/rdf-schema#subClassOf'}}]->(b {{uri:'{uri_2}'}}) detach delete p"""
-                                query_new_prop = f"""MERGE (a {{uri:'{uri_1}'}})-[p {{uri:'{property_btw_i}'}}]->(b {{uri:'{uri_2}'}})"""
+                                query_replace = f"""MATCH (a {{uri:'{uri_1}'}})-[p:SCO {{uri:'http://www.w3.org/2000/01/rdf-schema#subClassOf'}}]->(b {{uri:'{uri_2}'}}) detach delete p"""
+                                query_new_prop = f"""MERGE (a {{uri:'{uri_1}'}})-[p:PROPERTY {{uri:'{property_btw_i}'}}]->(b {{uri:'{uri_2}'}})"""
                                 query_neo4j_list(
                                     IP_SERVER_NEO4J,
                                     USER_NEO4J,

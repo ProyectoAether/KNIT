@@ -1,8 +1,8 @@
 import __init__
 import pandas as pd
 from decouple import config
-from knitbio.first_layer import knit
-from knitbio.second_layer import neo2RDF
+from knit.first_layer import knit
+from knit.second_layer import neo2RDF
 
 
 def star_knit(
@@ -14,8 +14,8 @@ def star_knit(
     wa: str,
     wd: str,
     ws: str,
-    ontology_list: list,
-    ontology_denied: list,
+    WhiteList: list,
+    BlackList: list,
 ):
 
     df = pd.read_csv(path_csv_file, sep=sep_csv, dtype="str")
@@ -37,8 +37,8 @@ def star_knit(
             wa,
             wd,
             ws,
-            ontology_list,
-            ontology_denied,
+            WhiteList,
+            BlackList,
         )
         for element in list_text[0:100]:
             list_text.remove(element)
@@ -56,8 +56,8 @@ def star_knit(
             wa,
             wd,
             ws,
-            ontology_list,
-            ontology_denied,
+            WhiteList,
+            BlackList,
         )
 
 
@@ -66,12 +66,12 @@ star_knit(
     (config("REST_URL")),
     (config("path_csv")),
     (config("sep_csv")),
-    (config("wc")),
-    (config("wa")),
-    (config("wd")),
-    (config("ws")),
-    (config("ontology_list")),
-    (config("ontology_denied")),
+    '0.8',
+    '0.8',
+    '0.8',
+    '0.8',
+    (config("WhiteList")),
+    (config("BlackList")),
 )
 neo2RDF(
     (config("IP_SERVER_NEO4J")),
