@@ -1,5 +1,6 @@
 
 ![KNITBIO](docs/source/knitbio.svg)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 The KNIT algorithm creates a workflow that aims to detect existing knowledge of a specific domain, collect the most relevant ontologies, study their interconnection, and display the result as a new ontology tailored to the research needs.
@@ -10,11 +11,11 @@ To perform this function, we need to provide KNIT with the main terms we want to
 
 The resulting ontology can be studied in OWL format or visually in the Neo4j database.
 
-## Requirements
+## Prerequisites
 
 
 ### 1. Own a neo4j (can be deployed on Docker)
-KNIT uses Neo4j as its database. Download the docker at the following link: https://hub.docker.com/_/neo4j
+KNIT uses Neo4j as its database. Download the docker image in the following link: https://hub.docker.com/_/neo4j
 
 ### 2. Own a user in the target database (BioPortal, AgroPortal, EcoPortal, MedPortal)
 Create a user account in the database you want to use (BioPortal, AgroPortal, EcoPortal, MedPortal); the API_KEY will be your user token.
