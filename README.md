@@ -98,7 +98,7 @@ sep_csv = ,
 ## Getting started
 Once the `.env` file is created, modify the `test.csv` file with the keywords. Then install the python requirements:
 ```
-$ pip install -r requeriments.txt
+$ pip install -r requirements.txt
 ```
 And finally, run main.py:
 ```
