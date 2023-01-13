@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:ns1="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:ns2="http://ontologies.khaos.uma.es/comment#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <owl:AnnotationProperty rdf:about="http://ontologies.khaos.uma.es/comment#definition">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P366">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legacy_Concept_Name</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45292">
+    <ns1:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A taxonomic category ranking below a family (or Subfamily) and above a species and generally consisting of a group of species exhibiting similar characteristics.</ns1:P97>
+    <ns1:P207 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1708235</ns1:P207>
+    <ns1:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genus</ns1:P108>
+    <ns1:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C45292</ns1:code>
+    <ns1:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genus_Taxon</ns1:P366>
+    <ns1:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</ns1:P106>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40098"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genus</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genus</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A taxonomic category ranking below a family (or Subfamily) and above a species and generally consisting of a group of species exhibiting similar characteristics.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45276">
+    <ns1:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The highest taxonomic rank, immediately above phylum or division. There are five biological kingdoms (Monera, Protista, Plantae, Fungi, Animalia) into which organisms are grouped, based on common characteristics.</ns1:P97>
+    <ns1:P207 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1708611</ns1:P207>
+    <ns1:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kingdom</ns1:P108>
+    <ns1:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C45276</ns1:code>
+    <ns1:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kingdom_Taxon</ns1:P366>
+    <ns1:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</ns1:P106>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40098"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kingdom</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kingdom</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'The highest taxonomic rank, immediately above phylum or division. There are five biological kingdoms (Monera, Protista, Plantae, Fungi, Animalia) into which organisms are grouped, based on common characteristics.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77913">
+    <ns1:P310 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired_Concept</ns1:P310>
+    <ns1:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animalia</ns1:P108>
+    <ns1:P200 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other_Organism_Groupings</ns1:P200>
+    <ns1:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C77913</ns1:code>
+    <ns1:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organism</ns1:P106>
+    <ns1:P98 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See 'Animal'</ns1:P98>
+    <rdf:type>
+      <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DeprecatedClass">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83484"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animalia</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animalia</ns2:synonym>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45277">
+    <ns1:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A major division of a biological kingdom, consisting of closely-related classes; represents a basic fundamental pattern of organization and, presumably, a common descent.</ns1:P97>
+    <ns1:P207 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1709533</ns1:P207>
+    <ns1:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phylum</ns1:P108>
+    <ns1:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C45277</ns1:code>
+    <ns1:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phylum_Taxon</ns1:P366>
+    <ns1:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</ns1:P106>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40098"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phylum</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phylum</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A major division of a biological kingdom, consisting of closely-related classes; represents a basic fundamental pattern of organization and, presumably, a common descent.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#code">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">code</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#R27">
+    <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual_Part_Of</rdfs:label>
+    <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P98">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DesignNote</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P207">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43459">
+    <ns1:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name applied to a plant, animal, or other organism, according to the Codes of Nomenclature, consisting of a Genus and species.</ns1:P97>
+    <ns1:P207 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1710024</ns1:P207>
+    <ns1:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific Name</ns1:P108>
+    <ns1:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C43459</ns1:code>
+    <ns1:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific_Name</ns1:P366>
+    <ns1:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</ns1:P106>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42614"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific Name</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific Name</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'The name applied to a plant, animal, or other organism, according to the Codes of Nomenclature, consisting of a Genus and species.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#A2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role_Has_Range</rdfs:label>
+    <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43743"/>
+    <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P208">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI_META_CUI</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#A1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role_Has_Domain</rdfs:label>
+    <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43743"/>
+    <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FULL_SYN</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P106">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic_Type</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ontologies.khaos.uma.es/comment#synonym">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ontologies.khaos.uma.es/comment#ontology_acronm">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P322">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contributing_Source</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preferred_Name</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P200">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OLD_PARENT</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P310">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concept_Status</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28428">
+    <ns1:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concept has been retired, and should not be used except to deal with old data.</ns1:P97>
+    <ns1:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired Concept</ns1:P108>
+    <ns1:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C28428</ns1:code>
+    <ns1:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired_Concepts</ns1:P366>
+    <ns1:P90 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All Retired Concepts</ns1:P90>
+    <ns1:P90 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired Concepts</ns1:P90>
+    <ns1:P90 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isRetired</ns1:P90>
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">THING</rdfs:label>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired Concept</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isRetired, Retired Concept, All Retired Concepts, Retired Concepts</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Concept has been retired, and should not be used except to deal with old data.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19238">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C97325">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufactured Object</rdfs:label>
+        <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufactured Object</ns2:synonym>
+        <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A physical object created by hand or machine.'</ns2:definition>
+        <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnostic, Therapeutic, or Research Equipment</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnostic, Therapeutic, and Research Equipment, Hardware, Diagnostic, Therapeutic, or Research Equipment, Equipment</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A manufactured object that is used to perform diagnostic, therapeutic or research activities.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </rdf:Description>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42614">
+    <ns1:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The words or language units by which a thing is known.</ns1:P97>
+    <ns1:P208 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL414908</ns1:P208>
+    <ns1:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name</ns1:P108>
+    <ns1:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C42614</ns1:code>
+    <ns1:P322 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRIDG</ns1:P322>
+    <ns1:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name_Generic_Concept</ns1:P366>
+    <ns1:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</ns1:P106>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name, Name</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'The words or language units by which a thing is known.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43639">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42698"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI Thesaurus Entity</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI Thesaurus Entity</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'The terminology entities that represent the elements that form and define the NCI Thesaurus.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene Product</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genome Encoded Entity, Gene Product</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A protein, RNA or a complex that contains proteins and/or RNA.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C22187">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experimental Organism Diagnosis</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-Human or Experimental Organism Diagnosis, Experimental Organism Diagnosis</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A condition or observation that is relevant to disease states, models of disease or characterization of those conditions in a non-human organism; this includes conditions or observations in organisms used in research settings.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </rdf:Description>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43743">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43643"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual_Part_Of</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual_Part_Of</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A role used to indicate that a conceptual entity is a sub-entity of another conceptual entity. Both the domain and the range for this role are 'Conceptual Entity'.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3910">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular Abnormality</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular Alteration, Genetic Abnormality, Molecular Abnormality, Cytogenetic or Molecular Genetic Abnormality, Chromosomal, Gene, or Protein Abnormality, MOLECULAR_ABNORMALITY</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A molecular or cytogenic abnormality which occurs in either human disease states or disease models.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20189">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property or Attribute</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property or Attribute</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A distinguishing quality or prominent aspect of a person, object, action, process, or substance.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </rdf:Description>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83484">
+    <ns1:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired Concept 2008</ns1:P108>
+    <ns1:P200 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired_Kind</ns1:P200>
+    <ns1:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C83484</ns1:code>
+    <ns1:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</ns1:P106>
+    <ns1:P98 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bin for deprecated concepts.</ns1:P98>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28428"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired Concept 2008</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired Concept 2008</ns2:synonym>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C7057">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease, Disorder or Finding</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease, Disorder or Finding</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A condition that is relevant to human neoplasms and non-neoplastic disorders.  This includes observations, test results, history and other concepts relevant to the characterization of human pathologic conditions.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </rdf:Description>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181">
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1908">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug, Food, Chemical or Biomedical Material</rdfs:label>
+        <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug, Food, Chemical or Biomedical Material</ns2:synonym>
+        <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'An organic or inorganic substance, element, isotope, food or other materials derived from microorganism, plant, or animal sources. They can be used for the prevention, diagnosis, treatment or research of disease states, for industrial purposes, or for the promotion or maintenance of organism viability or health.'</ns2:definition>
+        <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+      </rdf:Description>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20189"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548"/>
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20047">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnostic or Prognostic Factor</rdfs:label>
+        <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnostic or Prognostic Factor</ns2:synonym>
+        <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A characteristic of an organism that contributes to the diagnosis or treatment of a disease or to the prediction of clinical outcomes.'</ns2:definition>
+        <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+      </rdf:Description>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C7057"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C22187"/>
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C22188">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experimental Organism Anatomical Concept</rdfs:label>
+        <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-Human or Experimental Organism Anatomical Concept, Experimental Organism Anatomical Concept</ns2:synonym>
+        <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A biological structure, fluid or other substance that is present in a non-human organism; this includes anatomic entities found in organisms used in research settings. However, this grouping excludes single molecular entities.'</ns2:definition>
+        <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+      </rdf:Description>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3910"/>
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14250">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organism</rdfs:label>
+        <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BiologicEntity, organism, Organismal, Taxon, Organism, Organisms</ns2:synonym>
+        <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A living entity.'</ns2:definition>
+        <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+      </rdf:Description>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19238"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28428"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C97325"/>
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene</rdfs:label>
+        <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gene, Gene, Genes</ns2:synonym>
+        <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A functional unit of heredity which occupies a specific position on a particular chromosome and serves as the template for a product that contributes to a phenotype or a biological function.'</ns2:definition>
+        <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+      </rdf:Description>
+    </owl:disjointWith>
+    <ns1:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organizational header for concepts representing mostly abstract entities.</ns1:P97>
+    <ns1:P207 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1254372</ns1:P207>
+    <ns1:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</ns1:P108>
+    <ns1:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C20181</ns1:code>
+    <ns1:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual_Entities</ns1:P366>
+    <ns1:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classification</ns1:P106>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'An organizational header for concepts representing mostly abstract entities.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40098">
+    <ns1:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ranked categories for the classification of organisms according to their suspected evolutionary relationships.</ns1:P97>
+    <ns1:P207 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1515221</ns1:P207>
+    <ns1:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taxon</ns1:P108>
+    <ns1:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C40098</ns1:code>
+    <ns1:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taxon</ns1:P366>
+    <ns1:P90 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taxonomy</ns1:P90>
+    <ns1:P90 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biological Taxon</ns1:P90>
+    <ns1:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</ns1:P106>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taxon</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biological Taxon, Taxon, Taxonomy</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Ranked categories for the classification of organisms according to their suspected evolutionary relationships.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43643">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43639"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI Thesaurus Role</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role, NCI Thesaurus Role</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A specific non-hierarchical, named relationship between concepts present in the NCI Thesaurus.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42698">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terminology Entity</rdfs:label>
+    <ns2:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terminology Entity</ns2:synonym>
+    <ns2:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Terminology entities represent the elements that form and define an ontology.'</ns2:definition>
+    <ns2:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns2:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

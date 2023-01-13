@@ -4,7 +4,9 @@ from neo4j import GraphDatabase
 from rdflib import Graph
 from rdflib.namespace import RDFS, RDF, OWL, XSD
 from tqdm import tqdm
-from knitbio.py_query_cypher import query_neo4j_list
+from knit.py_query_cypher import query_neo4j_list
+from knit.py_btw_ind import property_between_individuals
+
 
 
 def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service):
@@ -54,9 +56,9 @@ def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service
     Basic notations of definition: synonyms and acronyms of ontologies.
     """
 
-    URI_definition = "http://ontologies.khaos.uma.es/comment#definition"
-    URI_synonym = "http://ontologies.khaos.uma.es/comment#synonym"
-    URI_ontology = "http://ontologies.khaos.uma.es/comment#ontology_acronm"
+    URI_definition = "http://ontology.test.es/comment#definition"
+    URI_synonym = "http://ontology.test.es/comment#synonym"
+    URI_ontology = "http://ontology.test.es/comment#ontology_acronm"
     g.add((rdflib.URIRef(URI_definition), RDF.type, OWL.AnnotationProperty))
     g.add((rdflib.URIRef(URI_definition), RDFS.subPropertyOf, RDFS.comment))
     g.add((rdflib.URIRef(URI_synonym), RDF.type, OWL.AnnotationProperty))
@@ -112,8 +114,8 @@ def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service
                                 uri_2,
                             )
                             if property_btw_i != None:
-                                query_replace = f"""MATCH (a {{uri:'{uri_1}'}})-[p {{uri:'http://www.w3.org/2000/01/rdf-schema#subClassOf'}}]->(b {{uri:'{uri_2}'}}) detach delete p"""
-                                query_new_prop = f"""MERGE (a {{uri:'{uri_1}'}})-[p {{uri:'{property_btw_i}'}}]->(b {{uri:'{uri_2}'}})"""
+                                query_replace = f"""MATCH (a {{uri:'{uri_1}'}})-[p:SCO {{uri:'http://www.w3.org/2000/01/rdf-schema#subClassOf'}}]->(b {{uri:'{uri_2}'}}) detach delete p"""
+                                query_new_prop = f"""MERGE (a {{uri:'{uri_1}'}})-[p:PROPERTY {{uri:'{property_btw_i}'}}]->(b {{uri:'{uri_2}'}})"""
                                 query_neo4j_list(
                                     IP_SERVER_NEO4J,
                                     USER_NEO4J,
@@ -312,7 +314,7 @@ def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service
                             term_synonym,
                         )
                     )
-                    # dicc_comment.update({'Synonym': node_neo.get('synonym')[1:-1]})
+
             if node_neo.get("definition") != None:
                 if len((node_neo.get("definition"))) > 2:
                     term_definition = rdflib.Literal(
@@ -337,8 +339,6 @@ def neo2RDF(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, API_KEY, sparql_service
                             term_ontology,
                         )
                     )
-    
-    print((g.serialize(format="nt")))
 
     owl_file = open("output/test_o.owl", "w")
     owl_file.write(g.serialize(format="pretty-xml"))

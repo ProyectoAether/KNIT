@@ -3,7 +3,7 @@ import requests
 import time
 from SPARQLWrapper import SPARQLWrapper, JSON, GET
 from tqdm import tqdm
-from knitbio.py_query_cypher import query_neo4j_list, query_neo4j_str
+from knit.py_query_cypher import query_neo4j_list, query_neo4j_str
 
 denied = 0
 List_node_news = []
@@ -21,29 +21,24 @@ def knit(
     wa: str,
     wd: str,
     ws: str,
-    ONTOLOGY: list,
-    ontology_denied=list,
+    WhiteList: list,
+    BlackList: list,
 ):
     """
-    :param list_text:
-    :param API_KEY
-    :param IP_SERVER_NEO4j
-    :param USER_NEO4J:
-    :param PASSWORD_NEO4j:
+    :param list_text: keywords
+    :WhiteList: List of ontologies where you want to do the search
+    :BlackList: List of ontologies that you want not to be used in the recovery
     """
-
     headers = {"Authorization": "apikey token=" + API_KEY}
 
     list_seach_cero = []
-    list_acronym_denied = ontology_denied
+    list_acronym_denied = BlackList
     denied = []
 
-    query_neo4j_str(
-        IP_SERVER_NEO4J,
-        USER_NEO4J,
-        PASSWORD_NEO4J,
-        ("MATCH (n) detach delete n"),
-    )
+    """
+    #To delete Neo4j with each execution of KNIT:
+    query_neo4j_str( IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J,("MATCH (n) detach delete n") )
+    """
 
     query_neo4j_str(
         IP_SERVER_NEO4J,
@@ -79,14 +74,15 @@ def knit(
                 definition:"{definition_str.replace('"', "'")}", ontology: '{str(acronym.replace('-', '_'))}'}}) 
                 SET a:{str(acronym.replace('-', '_'))}
                 """
-
             ),
         )
-
 
     def knit_data(uri: str, acronym: str):
 
         url_uri = reverse_url_encoding(uri)
+
+        sleep = 60
+
         while True:
             try:
 
@@ -95,6 +91,7 @@ def knit(
                     headers=headers,
                 )
                 break
+
             except:
                 time.sleep(sleep)
                 sleep += 60
@@ -167,7 +164,7 @@ def knit(
             for id in list_mapp:
                 if id in all_uri_neo4j and uri != id:
                     """
-                    Some elements have themselves among their mappings, to avoid generating these recursive links uri!=id
+                    Some elements have their mappings among themselves to prevent these recursive links from being generated uri!=id
                     """
                     query_neo4j_str(
                         IP_SERVER_NEO4J,
@@ -202,7 +199,7 @@ def knit(
                     uri_parent = data["@id"]
                     if not uri in all_mapping_neo4j:
                         """
-                        If URI has a mapping, it is as if the element in question already exists, so we take the branch to which it adheres as good, and we stop weaving
+                        If URI has a mapping, it is as if the element in question already existed, so we take the branch to which it adheres as good, and we stop weaving
                         """
                         data_elemet(data, onto)
                         mapping_parent = f"""
@@ -220,26 +217,21 @@ def knit(
 
     def recommend_bioportal(
         list_label: list,
-        ontology_denied: list,
+        BlackList: list,
         wc: str,
         wa: str,
         wd: str,
         ws: str,
-        ONTOLOGY: list,
+        WhiteList: list,
     ):
 
-        """
-        :param list_label=
-        :param ontology_denied=
-        """
         spider = {}
         head_str = ",".join(list_label)
         head_str_replace = head_str.replace("_", " ")
-
         sleep = 60
         while True:
             try:
-                if len(ONTOLOGY) >= 1:
+                if len(WhiteList) >= 1:
                     recommend = requests.get(
                         REST_URL
                         + "/recommender?input="
@@ -253,11 +245,11 @@ def knit(
                         + "&ws="
                         + ws
                         + "&ontologies="
-                        + ONTOLOGY,
+                        + WhiteList,
                         headers=headers,
                     )
 
-                else:
+                if len(WhiteList) == 0:
                     recommend = requests.get(
                         REST_URL
                         + "/recommender?input="
@@ -272,12 +264,13 @@ def knit(
                         + ws,
                         headers=headers,
                     )
+
                 break
             except:
                 time.sleep(sleep)
                 sleep += 60
-
         recommend_json = json.loads(recommend.content)
+
         try:
             if len(recommend_json) >= 1:
                 new_index = []
@@ -287,7 +280,7 @@ def knit(
                     for data_2 in ontology["coverageResult"]["annotations"]:
                         label_class = data_2["text"]
                         id_class = data_2["annotatedClass"]["@id"]
-                        if not label_class in spider and acronym not in ontology_denied:
+                        if not label_class in spider and acronym not in BlackList:
                             spider.update({label_class: {id_class: acronym}})
                 for label_class, id_class_acronym in tqdm(spider.items()):
                     new_index.append(label_class)
@@ -336,32 +329,29 @@ def knit(
                                 ),
                             )
                         else:
-                            new_index.remove(
-                                label_class
-                            )  # TODO:  search !!!!
+                            new_index.remove(label_class)
 
                 new_list = head_str.split(",")
                 for a in new_index:
                     """
-                    To find the nodes that have not been drawn 
+                    To find the nodes that have not been drawn
                     """
                     if a in new_list:
                         new_list.remove(a)
                     else:
                         node_clear = a.replace(" ", "_")
-                        new_list.remove(
-                            node_clear
-                        )  
+                        new_list.remove(node_clear)
 
                 list_label = new_list
 
             else:
-                print("\n\nthere is no ontological recommendation for any of the provided classes\n\n")
+                print(
+                    "\n\nthere is no ontological recommendation for any of the provided classes\n\n"
+                )
 
             list_label_denied = []
             if len(list_label) > 1:
                 for element_not_found in list_label:
-                    print(element_not_found)
                     list_label_denied.append(element_not_found)
                     if len(denied) == 0:
                         for label in list_label:
@@ -431,10 +421,12 @@ def knit(
                                 )
                     else:
                         denied.clear()
-                        recommend_bioportal(list_label, set(list_acronym_denied), wa, wd, ws)
+                        recommend_bioportal(
+                            list_label, set(list_acronym_denied), wa, wd, ws
+                        )
 
         except Exception as e:
-            print(e)
+            print(e, 1)
 
     def reverse_url_encoding(text: str):
         dicc_replace = {":": "%3A", "/": "%2F", "#": "%23"}
@@ -442,13 +434,10 @@ def knit(
             text = text.replace(x, y)
         return text
 
-    recommend_bioportal(list_text, ontology_denied, wc, wa, wd, ws, ONTOLOGY)
+    recommend_bioportal(list_text, BlackList, wc, wa, wd, ws, WhiteList)
 
     def property_sparql(uri_sparql: str, ontology: str):
-        """
-        :uri_sparql=
-        :ontology=
-        """
+
         list_uri = []
         sparql = SPARQLWrapper(sparql_service)
         if sparql_service == "http://sparql.bioontology.org/sparql/":
@@ -518,7 +507,7 @@ def knit(
                         )
 
             except Exception as e:
-                print(e)
+                print(e, 2)
                 list_type_elemnt.append("http://www.w3.org/2002/07/owl#Class")
 
             if "http://www.w3.org/2002/07/owl#Class" in list_type_elemnt:
@@ -588,7 +577,7 @@ def knit(
                                     )
 
                     except Exception as e:
-                        print(e)
+                        print(e, 3)
 
             if sparql_service == "http://sparql.bioontology.org/sparql/":
                 sparql.addCustomParameter("apikey", API_KEY)
@@ -637,7 +626,7 @@ def knit(
                         (query_data_property),
                     )
             except Exception as e:
-                print(e)
+                print(e, 4)
 
             sparql.setQuery(disjointWith_query)
             sparql.setReturnFormat(JSON)
@@ -677,13 +666,23 @@ def knit(
                     )
 
             except Exception as e:
-                print(e)
+                print(e, 5)
 
-    def property_class(uri_sparql: str, sparql_service: str, API_KEY: str, all_class: list, all_property: list,
-                       list_uri: list, ontology: str, IP_SERVER_NEO4J: str, USER_NEO4J: str, PASSWORD_NEO4J: str):
-        type_elemnt_class = 'http://www.w3.org/2002/07/owl#Class'
+    def property_class(
+        uri_sparql: str,
+        sparql_service: str,
+        API_KEY: str,
+        all_class: list,
+        all_property: list,
+        list_uri: list,
+        ontology: str,
+        IP_SERVER_NEO4J: str,
+        USER_NEO4J: str,
+        PASSWORD_NEO4J: str,
+    ):
+        type_elemnt_class = "http://www.w3.org/2002/07/owl#Class"
         sparql = SPARQLWrapper(sparql_service)
-        if sparql_service == 'http://sparql.bioontology.org/sparql/':
+        if sparql_service == "http://sparql.bioontology.org/sparql/":
             sparql.addCustomParameter("apikey", API_KEY)
 
         query_sparql = f"""
@@ -699,34 +698,46 @@ def knit(
                             }}"""
         sparql.setQuery(query_sparql)
         sparql.setReturnFormat(JSON)
-        if sparql_service != 'http://sparql.bioontology.org/sparql/':
+        if sparql_service != "http://sparql.bioontology.org/sparql/":
             sparql.setMethod(GET)
 
         try:
             if len(sparql.query().convert()["results"]["bindings"]) > 0:
                 for response in sparql.query().convert()["results"]["bindings"]:
-                    if response['property']['value'] != 'http://www.w3.org/2000/01/rdf-schema#subClassOf' and \
-                                response['property']['value'] != 'http://www.w3.org/2002/07/owl#disjointWith':
+                    if (
+                        response["property"]["value"]
+                        != "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+                        and response["property"]["value"]
+                        != "http://www.w3.org/2002/07/owl#disjointWith"
+                    ):
 
-                            # if response['type_elementB']['value'] == 'http://www.w3.org/2002/07/owl#Class' and  response['type_prop']['value'] != 'http://www.w3.org/2002/07/owl#AnnotationProperty':
-                        if response['type_elementB']['value'] == 'http://www.w3.org/2002/07/owl#Class':
-                            if response['elementB']['value'] not in all_class and response['elementB'][
-                                    'value'] not in list_uri:
-                                list_uri.append(response['elementB'][
-                                                        'value'])  
+                        if (
+                            response["type_elementB"]["value"]
+                            == "http://www.w3.org/2002/07/owl#Class"
+                        ):
+                            if (
+                                response["elementB"]["value"] not in all_class
+                                and response["elementB"]["value"] not in list_uri
+                            ):
+                                list_uri.append(response["elementB"]["value"])
                                 try:
                                     """need to know the acronym of the ontology to which it belongs
-                                        
-                                        PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#>
-                                        SELECT  DISTINCT ?acr
-                                        WHERE  { GRAPH ?grah {<http://purl.obolibrary.org/obo/TRAK_0000086> ?p ?o}.
-                                                ?ont ?r ?grah.
-                                                ?ont omv:acronym ?acr
-                                                } 
+
+                                    PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#>
+                                    SELECT  DISTINCT ?acr
+                                    WHERE  { GRAPH ?grah {<http://purl.obolibrary.org/obo/TRAK_0000086> ?p ?o}.
+                                            ?ont ?r ?grah.
+                                            ?ont omv:acronym ?acr
+                                            }
                                     """
                                     sparql_acron = SPARQLWrapper(sparql_service)
-                                    if sparql_service == 'http://sparql.bioontology.org/sparql/':
-                                        sparql_acron.addCustomParameter("apikey", API_KEY)
+                                    if (
+                                        sparql_service
+                                        == "http://sparql.bioontology.org/sparql/"
+                                    ):
+                                        sparql_acron.addCustomParameter(
+                                            "apikey", API_KEY
+                                        )
 
                                     query_acron = f"""
                                                         PREFIX omv: <http://omv.ontoware.org/2005/05/ontology#>
@@ -739,25 +750,45 @@ def knit(
 
                                     sparql_acron.setQuery(query_acron)
                                     sparql_acron.setReturnFormat(JSON)
-                                    if sparql_service != 'http://sparql.bioontology.org/sparql/':
+                                    if (
+                                        sparql_service
+                                        != "http://sparql.bioontology.org/sparql/"
+                                    ):
                                         sparql.setMethod(GET)
 
-                                    if (len(sparql_acron.query().convert()["results"]["bindings"])) > 0:
-                                        knit_data(response['elementB']['value'], (
-                                        sparql_acron.query().convert()["results"]["bindings"][-1]["acr"]["value"]).upper())
+                                    if (
+                                        len(
+                                            sparql_acron.query().convert()["results"][
+                                                "bindings"
+                                            ]
+                                        )
+                                    ) > 0:
+                                        knit_data(
+                                            response["elementB"]["value"],
+                                            (
+                                                sparql_acron.query().convert()[
+                                                    "results"
+                                                ]["bindings"][-1]["acr"]["value"]
+                                            ).upper(),
+                                        )
                                         """
-                                        At this point it is important to give a type to the new elements that have been created, 
-                                        which is why it is proposed that that as it cannot be a child class of anything but other 
-                                        classes (subclasses)the new elements must be classes. Therefore, we make a new call, 
-                                        and to retrieve a list of all our elements at the current time and from this list we remove
-                                        the previous elements and the list_uri. These results are traversed with a for and are given 
-                                        the type of classes at the same time they are integrated into list_uri for similar results.                                           
+                                        At this point, it is vital to give a type to the new elements that have been created,  
+                                        which is why it is proposed that as it cannot be a child class of anything but other classes (subclasses), 
+                                        the new elements must be classes. Therefore, we make a recent call, 
+                                        and to retrieve a list of all our aspects at the current time from this list; 
+                                        we remove the previous elements and the list_uri. 
+                                        These results are traversed with a for and are given the type of classes. 
+                                        At the same time, they are integrated into list_uri for similar results.                                            
                                         """
-                                        current_list_uri = [(uri["n.uri"]) for uri in query_neo4j_list(
+                                        current_list_uri = [
+                                            (uri["n.uri"])
+                                            for uri in query_neo4j_list(
                                                 IP_SERVER_NEO4J,
                                                 USER_NEO4J,
                                                 PASSWORD_NEO4J,
-                                                ("MATCH(n:Class) RETURN n.uri"), )]
+                                                ("MATCH(n:Class) RETURN n.uri"),
+                                            )
+                                        ]
                                         for new_uri in list_uri:
                                             all_class.append(new_uri)
 
@@ -767,47 +798,94 @@ def knit(
 
                                         for news_uri_neo in current_list_uri:
                                             query_type_new_uri = f"""MATCH (a {{uri:"{news_uri_neo}"}}),(b {{uri:'{type_elemnt_class}'}}) MERGE (a)-[:PROPERTY {{uri:'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'}}]->(b)"""
-                                            query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J,
-                                                                (query_type_new_uri))
+                                            query_neo4j_str(
+                                                IP_SERVER_NEO4J,
+                                                USER_NEO4J,
+                                                PASSWORD_NEO4J,
+                                                (query_type_new_uri),
+                                            )
                                     query_type_elemnt = f"""MATCH (a {{uri:"{response['elementB']['value']}"}}),(b {{uri:"http://www.w3.org/2002/07/owl#Class"}}) MERGE (a)-[:PROPERTY {{uri:'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'}}]->(b)"""
-                                    query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, (query_type_elemnt))
-                                except Exception as e:
-                                    print(e)
+                                    query_neo4j_str(
+                                        IP_SERVER_NEO4J,
+                                        USER_NEO4J,
+                                        PASSWORD_NEO4J,
+                                        (query_type_elemnt),
+                                    )
+                                except:
+                                    pass
 
-                            if len(response.get('type_prop')) >= 1 and len(response.get('label_property')) >= 1:
+                            if (
+                                len(response.get("type_prop")) >= 1
+                                and len(response.get("label_property")) >= 1
+                            ):
                                 query_element = f"""MATCH (a {{uri:"{response['elementB']['value']}"}}),(b {{uri:"{uri_sparql}"}}) MERGE (a)-[:PROPERTY {{uri:'{response['property']['value']}', label: '{response['label_property']['value']}', type: '{response['type_prop']['value']}'}}]->(b)"""
                             else:
                                 query_element = f"""MATCH (a {{uri:"{response['elementB']['value']}"}}),(b {{uri:"{uri_sparql}"}}) MERGE (a)-[:PROPERTY {{uri:'{response['property']['value']}'}}]->(b)"""
 
-                            query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, (query_element))
+                            query_neo4j_str(
+                                IP_SERVER_NEO4J,
+                                USER_NEO4J,
+                                PASSWORD_NEO4J,
+                                (query_element),
+                            )
 
-                        if response['type_elementB']['value'] != 'http://www.w3.org/2002/07/owl#Class' and len(response.get('label_elementB')) >= 1:
-                             
-                            if response['elementB']['value'] not in all_property and response['elementB'][
-                                    'value'] not in list_uri:
-                                list_uri.append(response['elementB']['value'])
+                        if (
+                            response["type_elementB"]["value"]
+                            != "http://www.w3.org/2002/07/owl#Class"
+                            and len(response.get("label_elementB")) >= 1
+                        ):
+                            if (
+                                response["elementB"]["value"] not in all_property
+                                and response["elementB"]["value"] not in list_uri
+                            ):
+                                list_uri.append(response["elementB"]["value"])
                                 query_new_propety = f"""MERGE (a:Propety {{uri:"{response['elementB']['value']}", label:"{response['label_elementB']['value']}"}})"""
-                                query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, (query_new_propety))
-
-                            if response['type_elementB']['value'] not in all_class and response['type_elementB'][
-                                    'value'] not in list_uri:
-                                list_uri.append(response['type_elementB']['value'])
+                                query_neo4j_str(
+                                    IP_SERVER_NEO4J,
+                                    USER_NEO4J,
+                                    PASSWORD_NEO4J,
+                                    (query_new_propety),
+                                )
+                            if (
+                                response["type_elementB"]["value"] not in all_class
+                                and response["type_elementB"]["value"] not in list_uri
+                            ):
+                                list_uri.append(response["type_elementB"]["value"])
                                 query_type_property = f""" MERGE (a:Class {{uri:"{response['type_elementB']['value']}"}})"""
-                                query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, (query_type_property))
+                                query_neo4j_str(
+                                    IP_SERVER_NEO4J,
+                                    USER_NEO4J,
+                                    PASSWORD_NEO4J,
+                                    (query_type_property),
+                                )
 
                             query_element = f"""MATCH (a {{uri:"{response['elementB']['value']}"}}),(b {{uri:"{uri_sparql}"}}) MERGE (a)-[:PROPERTY {{uri:'{response['property']['value']}'}}]->(b)"""
-                            query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, (query_element))
+                            query_neo4j_str(
+                                IP_SERVER_NEO4J,
+                                USER_NEO4J,
+                                PASSWORD_NEO4J,
+                                (query_element),
+                            )
 
                             query_type = f"""MATCH (a {{uri:"{response['elementB']['value']}"}}),(b {{uri:"{response['type_elementB']['value']}"}}) MERGE (a)-[:PROPERTY {{uri:'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'}}]->(b)"""
-                            query_neo4j_str(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, (query_type))
-
+                            query_neo4j_str(
+                                IP_SERVER_NEO4J,
+                                USER_NEO4J,
+                                PASSWORD_NEO4J,
+                                (query_type),
+                            )
 
         except Exception as e:
-            print(e)
+            print(e, 5)
 
     all_uri = [
-        (element["n.uri"], element["n.ontology"]) for element in
-        query_neo4j_list(IP_SERVER_NEO4J, USER_NEO4J, PASSWORD_NEO4J, ("MATCH(n:Class) RETURN n.uri, n.ontology"))
+        (element["n.uri"], element["n.ontology"])
+        for element in query_neo4j_list(
+            IP_SERVER_NEO4J,
+            USER_NEO4J,
+            PASSWORD_NEO4J,
+            ("MATCH(n:Class) RETURN n.uri, n.ontology"),
+        )
     ]
     for uri_ontology in tqdm(all_uri):
         property_sparql(uri_ontology[0], uri_ontology[1])
