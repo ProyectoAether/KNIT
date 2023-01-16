@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:ns1="http://www.geneontology.org/formats/oboInOwl#"
+  xmlns:ns2="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+  xmlns:ns3="http://ontology.test.es/comment#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <owl:Class rdf:about="http://edamontology.org/data_0975">
+    <ns1:consider rdf:resource="http://edamontology.org/data_0842"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data resource identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'An identifier of a data resource.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16833">
+    <ns2:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The branches of medical science that deal with nonsurgical techniques.</ns2:P97>
+    <ns2:P207 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C0025118</ns2:P207>
+    <ns2:P325 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"><![CDATA[<ncicp:ComplexDefinition xmlns:ncicp='http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#'><ncicp:def-definition>Refers to the practices and procedures used for the prevention, treatment, or relief of symptoms of a diseases or abnormal conditions. This term may also refer to a legal drug used for the same purpose.</ncicp:def-definition><ncicp:def-source>NCI-GLOSS</ncicp:def-source></ncicp:ComplexDefinition>]]></ns2:P325>
+    <ns2:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medicine</ns2:P108>
+    <ns2:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C16833</ns2:code>
+    <ns2:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medicine</ns2:P366>
+    <ns2:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biomedical Occupation or Discipline</ns2:P106>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45427"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medicine</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medicine, medicine</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'The branches of medical science that deal with nonsurgical techniques.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_0978">
+    <ns1:consider rdf:resource="http://edamontology.org/data_0842"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete entity identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Name or other identifier of a discrete entity (any biological thing with a distinct, discrete physical existence).'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P98">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DesignNote</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P207">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS_CUI</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P208">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI_META_CUI</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:Class rdf:about="http://edamontology.org/data_0980">
+    <ns1:consider rdf:resource="http://edamontology.org/data_0842"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entity collection identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Name or other identifier of a collection of discrete biological entities.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_1152">
+    <ns1:consider rdf:resource="http://edamontology.org/data_0842"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HIVDB identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Identifier of an entry from the HIVDB database.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_0986">
+    <ns1:consider rdf:resource="http://edamontology.org/data_1086"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemical identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Unique identifier of a chemical compound.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALT_DEFINITION</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:Class rdf:about="http://edamontology.org/data_3103">
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edam</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifiers</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bioinformatics</ns1:inSubset>
+    <rdfs:subClassOf rdf:resource="http://edamontology.org/data_2091"/>
+    <rdfs:subClassOf rdf:resource="http://edamontology.org/data_2895"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATC code</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Unique identifier of a drug conforming to the Anatomical Therapeutic Chemical (ATC) Classification System, a drug classification system controlled by the WHO Collaborating Centre for Drug Statistics Methodology (WHOCC).'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://edamontology.org/is_identifier_of">
+    <rdfs:range rdf:resource="http://edamontology.org/data_0006"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is identifier of</rdfs:label>
+    <rdfs:domain rdf:resource="http://edamontology.org/data_0842"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edamontology.org/has_identifier">
+    <rdfs:domain rdf:resource="http://edamontology.org/data_0006"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has identifier</rdfs:label>
+    <rdfs:range rdf:resource="http://edamontology.org/data_0842"/>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://ontology.test.es/comment#ontology_acronm">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preferred_Name</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:ObjectProperty rdf:about="http://edamontology.org/is_output_of">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is output of</rdfs:label>
+    <rdfs:domain rdf:resource="http://edamontology.org/data_0006"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://edamontology.org/data_0974">
+    <ns1:consider rdf:resource="http://edamontology.org/data_0842"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entity identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'An identifier of a biological entity or phenomenon.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P106">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic_Type</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_related_synonym</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_broad_synonym</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:Class rdf:about="http://edamontology.org/data_0843">
+    <ns1:consider rdf:resource="http://edamontology.org/data_0006"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database entry</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'An entry (retrievable via URL) from a biological database.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FULL_SYN</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ontology.test.es/comment#synonym">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </owl:AnnotationProperty>
+  <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#A2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role_Has_Range</rdfs:label>
+    <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43743"/>
+    <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://ontology.test.es/comment#definition">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </owl:AnnotationProperty>
+  <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#A1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role_Has_Domain</rdfs:label>
+    <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43743"/>
+    <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://edamontology.org/data_0992">
+    <ns1:consider rdf:resource="http://edamontology.org/data_1086"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ligand identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Code word for a ligand, for example from a PDB file.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://edamontology.org/has_format">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has format</rdfs:label>
+    <rdfs:domain rdf:resource="http://edamontology.org/data_0006"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edamontology.org/has_input">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has input</rdfs:label>
+    <rdfs:range rdf:resource="http://edamontology.org/data_0006"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#A11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has_NICHD_Parent</rdfs:label>
+    <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38284"/>
+    <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38273"/>
+    <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38291"/>
+    <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38288"/>
+    <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38114"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://edamontology.org/data_1067">
+    <ns1:consider rdf:resource="http://edamontology.org/data_0976"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phylogenetic distance matrix identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Identifier of a phylogenetic distance matrix.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_0979">
+    <ns1:consider rdf:resource="http://edamontology.org/data_0842"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entity feature identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Name or other identifier of an entity feature (a physical part or region of a discrete biological entity, or a feature that can be mapped to such a thing).'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consider</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P322">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contributing_Source</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#code">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">code</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:ObjectProperty rdf:about="http://edamontology.org/is_format_of">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is format of</rdfs:label>
+    <rdfs:range rdf:resource="http://edamontology.org/data_0006"/>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_exact_synonym</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#R27">
+    <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual_Part_Of</rdfs:label>
+    <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://edamontology.org/is_input_of">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is input of</rdfs:label>
+    <rdfs:domain rdf:resource="http://edamontology.org/data_0006"/>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEFINITION</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:ObjectProperty rdf:about="http://edamontology.org/has_output">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has output</rdfs:label>
+    <rdfs:range rdf:resource="http://edamontology.org/data_0006"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://edamontology.org/data_1062">
+    <ns1:consider rdf:resource="http://edamontology.org/data_0842"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database entry identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'This concept is required for completeness. It should never have child concepts.', 'An identifier of an entry from a database where the same type of identifier is used for objects (data) of different semantic type.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_0981">
+    <ns1:consider rdf:resource="http://edamontology.org/data_0842"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenomenon identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Name or other identifier of a physical, observable biological occurrence or event.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P366">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legacy_Concept_Name</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P320">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OID</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_narrow_synonym</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in_subset</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25169">
+    <ns2:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A way of getting from one place to another; an established line of travel or access; the way a chemical or pollutant enters an organism after contact, particularly, the way of drug administration.</ns2:P97>
+    <ns2:P207 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C0449444</ns2:P207>
+    <ns2:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Route</ns2:P108>
+    <ns2:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C25169</ns2:code>
+    <ns2:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Route</ns2:P366>
+    <ns2:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional Concept</ns2:P106>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Route</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Route</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A way of getting from one place to another; an established line of travel or access; the way a chemical or pollutant enters an organism after contact, particularly, the way of drug administration.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45427">
+    <ns2:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The science of dealing with the maintenance of health and the prevention and treatment of disease.</ns2:P97>
+    <ns2:P208 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL414909</ns2:P208>
+    <ns2:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medical Science</ns2:P108>
+    <ns2:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C45427</ns2:code>
+    <ns2:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medical_Science</ns2:P366>
+    <ns2:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biomedical Occupation or Discipline</ns2:P106>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19160"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medical Science</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medical Science</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'The science of dealing with the maintenance of health and the prevention and treatment of disease.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38288">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38114"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oral Route of Administration</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per Os, Oral use, Orally, PO, Oral, Oral Route of Administration, Intraoral Route of Administration, ORAL</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'The introduction of a substance to the mouth or into the gastrointestinal tract by the way of the mouth, usually for systemic action. It is the most common, convenient, and usually the safest and least expensive route of drug administration, but it uses the most complicated pathway to the tissues and bioavailability varies. The disadvantages of method are hepatic first pass metabolism and enzymatic degradation of the drug within the gastrointestinal tract. This prohibits oral administration of certain classes of drugs especially peptides and proteins.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">THING</rdfs:label>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gene, Gene, Genes</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A functional unit of heredity which occupies a specific position on a particular chromosome and serves as the template for a product that contributes to a phenotype or a biological function.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </rdf:Description>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43639">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42698"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI Thesaurus Entity</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI Thesaurus Entity</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'The terminology entities that represent the elements that form and define the NCI Thesaurus.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38114">
+    <ns2:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Designation of the part of the body through which or into which, or the way in which, the medicinal product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration.</ns2:P97>
+    <ns2:P207 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C0013153</ns2:P207>
+    <ns2:P320 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.16.840.1.113883.3.26.1.1.1</ns2:P320>
+    <ns2:P325 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"><![CDATA[<ncicp:ComplexDefinition xmlns:ncicp='http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#'><ncicp:def-definition>The course by which a substance was administered in order to reach the site of action in the body.</ncicp:def-definition><ncicp:def-source>CDISC</ncicp:def-source></ncicp:ComplexDefinition>]]></ns2:P325>
+    <ns2:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Route of Administration</ns2:P108>
+    <ns2:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C38114</ns2:code>
+    <ns2:P322 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FDA</ns2:P322>
+    <ns2:P322 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NICHD</ns2:P322>
+    <ns2:P322 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CDISC</ns2:P322>
+    <ns2:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug_Route_of_Administration</ns2:P366>
+    <ns2:P90 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug Route of Administration</ns2:P90>
+    <ns2:P90 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROUTE</ns2:P90>
+    <ns2:P90 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Route of Drug Administration</ns2:P90>
+    <ns2:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional Concept</ns2:P106>
+    <ns2:P98 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Route of administration is primarily determined by the properties of the substance and the therapeutic objectives. The pharmacokinetic parameters of the drug are critically influenced by the route of administration. The major distinction between routes of administration is based on whether the drug takes effect merely in the local area where it is applied, or whether it reaches targeted destination through the systemic circulation. In the latter case, the substance is subject to the possible first-pass metabolism in the lungs, liver, and other organs.</ns2:P98>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25169"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Route of Administration</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROUTE_DETAIL, route of administration, route_of_administration, Route of Drug Administration, route of administration (ROA), Route of Administration, ROUTE, Drug Route of Administration, ROUTE OF ADMINISTRATION</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Designation of the part of the body through which or into which, or the way in which, the medicinal product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_0842">
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://edamontology.org/data_2048">
+        <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Report</rdfs:label>
+        <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Document, Record</ns3:synonym>
+        <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'You can use this term by default for any textual report, in case you can't find another, more specific term. Reports may be generated automatically or collated by hand and can include metadata on the origin, source, history, ownership or location of some thing.', 'A human-readable collection of information including annotation on a biological entity or phenomena, computer-generated reports of analysis of primary data (e.g. sequence or structural), and metadata (data about primary data) or any other free (essentially unformatted) text, as distinct from the primary data itself.'</ns3:definition>
+        <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+      </rdf:Description>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://edamontology.org/data_3031">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core data</rdfs:label>
+        <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A type of data that (typically) corresponds to entries from the primary biological databases and which is (typically) the primary input or output of a tool, i.e. the data the tool processes or generates, as distinct from metadata and identifiers which describe and identify such core data, parameters that control the behaviour of tools, reports of derivative data generated by tools and annotation.', 'Core data entities typically have a format and may be identified by an accession number.'</ns3:definition>
+        <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+      </rdf:Description>
+    </owl:disjointWith>
+    <ns1:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.org/dc/elements/1.1/identifier</ns1:hasNarrowSynonym>
+    <ns1:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wsio.org/data_005</ns1:hasExactSynonym>
+    <ns1:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://semanticscience.org/resource/SIO_000115</ns1:hasExactSynonym>
+    <ns1:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ID</ns1:hasExactSynonym>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edam</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifiers</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bioinformatics</ns1:inSubset>
+    <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0006"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifier</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ID, {uri: http://purl.org/dc/elements/1.1/identifier}</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A text token, number or something else which identifies an entity, but which may not be persistent (stable) or unique (the same identifier may identify multiple things).'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_0993">
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edam</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifiers</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bioinformatics</ns1:inSubset>
+    <rdfs:subClassOf rdf:resource="http://edamontology.org/data_1086"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Identifier of a drug.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_0006">
+    <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#DeprecatedClass"/>
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://edamontology.org/operation_0004">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operation</rdfs:label>
+        <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computational procedure, Computational subroutine, Computational tool, Computational operation, Function (programming), Lambda abstraction, sumo:Function, Mathematical function, Process, Mathematical operation, Function, Computational method</ns3:synonym>
+        <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A function that processes a set of inputs and results in a set of outputs, or associates arguments (inputs) with values (outputs).', 'Special cases are: a) An operation that consumes no input (has no input arguments). Such operation is either a constant function, or an operation depending only on the underlying state. b) An operation that may modify the underlying state but has no output. c) The singular-case operation with no input or output, that still may modify the underlying state.'</ns3:definition>
+        <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+      </rdf:Description>
+    </owl:disjointWith>
+    <ns1:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://semanticscience.org/resource/SIO_000088</ns1:hasRelatedSynonym>
+    <ns1:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://semanticscience.org/resource/SIO_000069</ns1:hasRelatedSynonym>
+    <ns1:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/IAO_0000027</ns1:hasRelatedSynonym>
+    <ns1:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.onto-med.de/ontologies/gfo.owl#Perpetuant</ns1:hasRelatedSynonym>
+    <ns1:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/IAO_0000030</ns1:hasRelatedSynonym>
+    <ns1:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.org/biotop/biotop.owl#DigitalEntity</ns1:hasRelatedSynonym>
+    <ns1:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Datum</ns1:hasNarrowSynonym>
+    <ns1:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data set</ns1:hasNarrowSynonym>
+    <ns1:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wsio.org/data_002</ns1:hasExactSynonym>
+    <ns1:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data record</ns1:hasExactSynonym>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edam</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bioinformatics</ns1:inSubset>
+    <ns1:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.ifomis.org/bfo/1.1/snap#Continuant</ns1:hasBroadSynonym>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data record, Data set, Datum</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Information, represented in an information artefact (data record) that is 'understandable' by dedicated computational tools that can use the data as input or produce it as output.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C7057">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease, Disorder or Finding</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease, Disorder or Finding</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A condition that is relevant to human neoplasms and non-neoplastic disorders.  This includes observations, test results, history and other concepts relevant to the characterization of human pathologic conditions.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14250">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organism</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BiologicEntity, organism, Organismal, Taxon, Organism, Organisms</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A living entity.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C97325">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufactured Object</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufactured Object</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A physical object created by hand or machine.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C22188">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experimental Organism Anatomical Concept</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-Human or Experimental Organism Anatomical Concept, Experimental Organism Anatomical Concept</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A biological structure, fluid or other substance that is present in a non-human organism; this includes anatomic entities found in organisms used in research settings. However, this grouping excludes single molecular entities.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </rdf:Description>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19160">
+    <ns2:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grouping of occupations and fields of study.</ns2:P97>
+    <ns2:P207 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1518533</ns2:P207>
+    <ns2:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occupation or Discipline</ns2:P108>
+    <ns2:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C19160</ns2:code>
+    <ns2:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occupation_or_Discipline</ns2:P366>
+    <ns2:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occupation or Discipline</ns2:P106>
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occupation or Discipline</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occupation or Discipline</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A grouping of occupations and fields of study.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38284">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38114"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nasal Route of Administration</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NASAL, Nasal use, Nasal, Nasal Route of Administration, Intranasal Route of Administration</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Administration of a drug by the way of the nose. This often results in systemic action of the agent due to absorption through the nasal mucosa. The richly supplied vascular nature of the nasal mucosa coupled with its high drug permeation makes the nasal route of administration attractive for many drugs, including proteins and peptides.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38291">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38114"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parenteral Route of Administration</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARENTERAL, PAREN, Parenteral Route of Administration, Parenteral</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Administration of a substance by some means other than through the gastrointestinal tract: usually through injection, infusion, or implantation. Predominantly, the drug action is systemic, but in some cases, it is confined to local area.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene Product</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genome Encoded Entity, Gene Product</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A protein, RNA or a complex that contains proteins and/or RNA.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </rdf:Description>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42698">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terminology Entity</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terminology Entity</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Terminology entities represent the elements that form and define an ontology.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19238">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C97325"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnostic, Therapeutic, or Research Equipment</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnostic, Therapeutic, and Research Equipment, Hardware, Diagnostic, Therapeutic, or Research Equipment, Equipment</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A manufactured object that is used to perform diagnostic, therapeutic or research activities.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </rdf:Description>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43743">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43643"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual_Part_Of</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual_Part_Of</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A role used to indicate that a conceptual entity is a sub-entity of another conceptual entity. Both the domain and the range for this role are 'Conceptual Entity'.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_0976">
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edam</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifiers</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bioinformatics</ns1:inSubset>
+    <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0842"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifier (by type of entity)</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifier (typed)</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'This concept exists only to assist EDAM maintenance and navigation in graphical browsers. It does not add semantic information. This branch provides an alternative organisation of the concepts nested under 'Accession' and 'Name'. All concepts under here are already included under 'Accession' or 'Name'.', 'An identifier that identifies a particular type of data.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20047">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnostic or Prognostic Factor</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnostic or Prognostic Factor</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A characteristic of an organism that contributes to the diagnosis or treatment of a disease or to the prediction of clinical outcomes.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3910">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular Abnormality</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular Alteration, Genetic Abnormality, Molecular Abnormality, Cytogenetic or Molecular Genetic Abnormality, Chromosomal, Gene, or Protein Abnormality, MOLECULAR_ABNORMALITY</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A molecular or cytogenic abnormality which occurs in either human disease states or disease models.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28428">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired Concept</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isRetired, Retired Concept, All Retired Concepts, Retired Concepts</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Concept has been retired, and should not be used except to deal with old data.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </rdf:Description>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20181">
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1908">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug, Food, Chemical or Biomedical Material</rdfs:label>
+        <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug, Food, Chemical or Biomedical Material</ns3:synonym>
+        <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'An organic or inorganic substance, element, isotope, food or other materials derived from microorganism, plant, or animal sources. They can be used for the prevention, diagnosis, treatment or research of disease states, for industrial purposes, or for the promotion or maintenance of organism viability or health.'</ns3:definition>
+        <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+      </rdf:Description>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20189">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property or Attribute</rdfs:label>
+        <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property or Attribute</ns3:synonym>
+        <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A distinguishing quality or prominent aspect of a person, object, action, process, or substance.'</ns3:definition>
+        <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+      </rdf:Description>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20047"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C7057"/>
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C22187">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experimental Organism Diagnosis</rdfs:label>
+        <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-Human or Experimental Organism Diagnosis, Experimental Organism Diagnosis</ns3:synonym>
+        <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A condition or observation that is relevant to disease states, models of disease or characterization of those conditions in a non-human organism; this includes conditions or observations in organisms used in research settings.'</ns3:definition>
+        <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+      </rdf:Description>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C22188"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3910"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14250"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19238"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28428"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C97325"/>
+    <owl:disjointWith rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612"/>
+    <ns2:P97 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organizational header for concepts representing mostly abstract entities.</ns2:P97>
+    <ns2:P207 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1254372</ns2:P207>
+    <ns2:P108 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</ns2:P108>
+    <ns2:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C20181</ns2:code>
+    <ns2:P366 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual_Entities</ns2:P366>
+    <ns2:P106 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classification</ns2:P106>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conceptual Entity</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'An organizational header for concepts representing mostly abstract entities.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38273">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38291"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intravascular Route of Administration</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTRAVASCULAR, I-VASC, Intravascular Route of Administration, Intravascular</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'The administration of an agent within a vessel or vessels.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_1086">
+    <ns1:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemical compound identifier</ns1:hasExactSynonym>
+    <ns1:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Small molecule identifier</ns1:hasExactSynonym>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edam</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifiers</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bioinformatics</ns1:inSubset>
+    <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0982"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compound identifier</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Small molecule identifier, Chemical compound identifier, Compound ID</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Identifier of an entry from a database of chemicals.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43643">
+    <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43639"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI Thesaurus Role</rdfs:label>
+    <ns3:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role, NCI Thesaurus Role</ns3:synonym>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A specific non-hierarchical, named relationship between concepts present in the NCI Thesaurus.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCIT</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_2091">
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edam</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifiers</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bioinformatics</ns1:inSubset>
+    <ns1:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://semanticscience.org/resource/SIO_000731</ns1:hasBroadSynonym>
+    <ns1:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://semanticscience.org/resource/SIO_000675</ns1:hasBroadSynonym>
+    <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0842"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accession</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'A persistent (stable) and unique identifier, typically identifying an object (entry) from a database.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_0982">
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edam</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifiers</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bioinformatics</ns1:inSubset>
+    <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0976"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecule identifier</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Name or other identifier of a molecule.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <owl:Class rdf:about="http://edamontology.org/data_2895">
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edam</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifiers</ns1:inSubset>
+    <ns1:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bioinformatics</ns1:inSubset>
+    <rdfs:subClassOf rdf:resource="http://edamontology.org/data_0993"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug accession</rdfs:label>
+    <ns3:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Accession of a drug.'</ns3:definition>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</rdfs:label>
+  </rdf:Description>
+  <owl:Class rdf:about="http://www.w3.org/2002/07/owl#DeprecatedClass">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DeprecatedClass</rdfs:label>
+    <ns3:ontology_acronm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDAM</ns3:ontology_acronm>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">None</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
