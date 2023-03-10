@@ -32,7 +32,7 @@ def knit(
     headers = {"Authorization": "apikey token=" + API_KEY}
 
     list_seach_cero = []
-    list_acronym_denied = BlackList
+    list_acronym_denied = [BlackList]
     denied = []
 
     """
@@ -340,6 +340,8 @@ def knit(
                         new_list.remove(a)
                     else:
                         node_clear = a.replace(" ", "_")
+                        
+                        
                         new_list.remove(node_clear)
 
                 list_label = new_list
@@ -422,7 +424,7 @@ def knit(
                     else:
                         denied.clear()
                         recommend_bioportal(
-                            list_label, set(list_acronym_denied), wa, wd, ws
+                            list_label, set(list_acronym_denied), wc, wa, wd, ws, WhiteList
                         )
 
         except Exception as e:
