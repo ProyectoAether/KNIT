@@ -1,16 +1,19 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
-doi: doi.org/10.1016/j.eswa.2023.120239
 title: "KNIT: Ontology reusability through knowledge graph exploration"
+message: "If you use this software, please cite it as below."
 authors:
-  - family-names: "Rodr{\'\i}guez-Revello"
-    given-names: " Jorge"
-  - family-names: "Barba-Gonz{\'a}lez"
-    given-names: " Crist{\'o}bal"
-  - family-names: "Rybinski"
-    given-names: " Maciej"
-  - family-names: "Navas-Delgado"
-    given-names: " Ismael"
+  - family-names: Rodríguez-Revello
+    given-names: Jorge
+  - family-names: Barba-González
+    given-names: Cristóbal
+  - family-names: Rybinski
+    given-names: Maciej
+  - family-names: Navas-Delgado
+    given-names: Ismael
+identifiers:
+  - type: doi
+    value: doi.org/10.1016/j.eswa.2023.120239
+license: MIT
 preferred-citation:
   type: "article"
   publisher:
@@ -22,11 +25,11 @@ preferred-citation:
   publisher: "Elsevier"
   start: "120239"
   authors:
-    - family-names: "Rodr{\'\i}guez-Revello"
-      given-names: " Jorge"
-    - family-names: "Barba-Gonz{\'a}lez"
-      given-names: " Crist{\'o}bal"
-    - family-names: "Rybinski"
-      given-names: " Maciej"
-    - family-names: "Navas-Delgado"
-      given-names: " Ismael"
+    - family-names: Rodríguez-Revello
+      given-names: Jorge
+    - family-names: Barba-González
+      given-names: Cristóbal
+    - family-names: Rybinski
+      given-names: Maciej
+    - family-names: Navas-Delgado
+      given-names: Ismael
