@@ -1,8 +1,7 @@
-date-released: "2023-01-01"
-repository-code: "https://github.com/ProyectoAether/KNIT"
+cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
+doi: doi.org/10.1016/j.eswa.2023.120239
 title: "KNIT: Ontology reusability through knowledge graph exploration"
-cff-version: "CITATION.cff"
 authors:
   - family-names: "Rodr{\'\i}guez-Revello"
     given-names: " Jorge"
